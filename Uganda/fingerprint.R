@@ -19,3 +19,8 @@ d1 + geom_bin2d(bins=100) +
   scale_fill_gradientn(colours= c('blue','green','yellow','yellow','orange','orange','red','red','red')) +
   theme(panel.background = element_rect(fill = 'darkblue'), panel.grid.major = element_line(colour = 'darkblue'), panel.grid.minor = element_line(colour= 'darkblue')) +
   labs(x = "Voter Turnout %", y = "% of votes for winner")
+
+## find polling stations with anomalous results
+unlikely <- data[data$totalper == 1 & data$winnervalid > 0.9, ]
+unlikely_districts <- count(unlikely$DISTRICT)
+sum(unlikely$YOWERI..KAGUTA.MUSEVENI)
