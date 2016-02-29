@@ -4,7 +4,8 @@ Results data provided by the Uganda Election Commission - http://www.ec.or.ug/ec
 
 ## Data extraction
 The PDF was converted to a csv using:
-- read.py to extract the cntent of the PDF and write it to a python .pkl file, and
+- read.py to extract the content of the PDF and write it to a python .pkl file, and
 - parse.py to process the .pkl file and convert it to a structured .csv
+- some final manual edits were made to remove whitespace and fix word orders which were reversed by PDF formatting
 
-**Note that the Constituency information may not be accurate. The PDF provided by the election commission lists one constituency at the top of each page. There appear to be cases where a page contains data from multiple constituencies, but the document still only lists a singe constituency. For completeness we include the data as provided by the EC.**
+**Note that the Constituency information may not be accurate. The PDF provided by the election commission lists one constituency at the top of each page. There appear to be cases where a page contains data from multiple constituencies, but the document still only lists a single constituency. For completeness we include the data as provided by the EC.**
